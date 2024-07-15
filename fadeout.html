@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            /* display: none; */
+
+        }
+
+        img {
+            margin-top: 200px;
+            padding: 50px;
+            margin-left: 50px;
+
+     }
+    </style>
+</head>
+
+<body>
+    <img id="ab"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPr6lb-4iZNcORaSgJs4Gpx31biRWavJsC0Q&usqp=CAU"
+        alt="">
+    <img id="bc"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPr6lb-4iZNcORaSgJs4Gpx31biRWavJsC0Q&usqp=CAU"
+        alt="">
+    <img id="cd"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPr6lb-4iZNcORaSgJs4Gpx31biRWavJsC0Q&usqp=CAU"
+        alt="">
+    <button class="show" style="background-color: yellow; width: 80px; height: 40px;">Show</button>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function () {
+        $(".show").click(function () {
+            $("#ab").fadeOut("slow")
+            $("#bc").fadeOut("slow")
+            $("#cd").fadeOut(3000)
+        })
+    })
+
+
+</script>
+
+</html>

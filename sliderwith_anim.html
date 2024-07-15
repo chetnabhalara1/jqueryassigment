@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider with Animation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+    
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .slider-container {
+            width: 80%;
+            overflow: hidden;
+            border: 2px solid #ccc;
+            position: relative;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide" style="background-color: orange;"></div>
+            <div class="slide" style="background-color: aqua;"></div>
+            <div class="slide" style="background-color: green;"></div>
+            <div class="slide" style="background-color: black;"></div>
+            <div class="slide" style="background-color: pink;"></div>
+            <div class="slide" style="background-color: pink;"></div>
+        </div>
+    </div>
+</body>
+<script>
+
+    $(document).ready(function () {
+        let currentSlide = 0;
+        const slides = $('.slide');
+        const totalSlides = slides.length;
+
+        function showNextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            $('.slider').css('transform', 'translateX(' + (-currentSlide * 100) + '%)');
+
+            
+            const bgColor = $(slides[currentSlide]).css('background-color');
+            $('body').css('background-color', bgColor);
+        }
+
+        setInterval(showNextSlide, 2000);
+    });
+
+</script>
+
+</html>

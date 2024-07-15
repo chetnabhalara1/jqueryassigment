@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            background-color: black;
+        }
+
+        #two,
+        #one {
+            padding: 5px;
+            text-align: center;
+            color: black;
+            margin-top: 0;
+            background-color: rgb(255, 208, 0);
+            /* border: solid 1px #c3c3c3; */
+            border-radius: 10px;
+
+
+        }
+
+        #two {
+            padding: 170px;
+            display: none;
+
+        }
+
+        button {
+            margin-left: 300px;
+            margin-top: 40px;
+            border-radius: 100px;
+            height: 40px;
+            width: 100px;
+
+        }
+
+        #a {
+            background-color: yellow;
+
+        }
+
+        #b {
+            background-color: yellow;
+        }
+
+        #c {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="one">
+        <div id="two">Slidedown / Slideup / SlideToggle</div>
+    </div>
+    <button id="b">Slideup</button>
+    <button id="a">slideDown</button>
+    <button id="c">SlideToggle</button>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#one").click(function () {
+            $("#two").slideDown("slow");
+        });
+    });
+
+</script>
+
+</html>
